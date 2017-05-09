@@ -1,0 +1,12 @@
+#  4 May 2017 06:33
+
+Load scripts from a folder as soon as ServerTree has started up. 
+This provides persistency. I.e. you avoid re-running manually code for loading buffers, defining synthdefs etc. when rebooting the server.  Also, the scripts are preserved on files and are run even when you restart/recompile sclang.  
+
+Also provides utility commands for EMACS to set these folders. 
+
+This is a rough draft. 
+
+PathName and thisProcess.interpreter/compile in SC do not provide correct relative path resolution at load time.  Therefore, the present library gives a quick workaround (hack).  A better solution should be worked out - and documented - after resolving the manner in which PathName works at recompile time on SuperCollider (with discussion in the dev forum).  
+
+
